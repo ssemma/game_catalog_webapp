@@ -1,5 +1,5 @@
 # Game Catalog Web App
-This is a web application that has a list of games that sorted by themes. It also use third-party authentication
+This is a web application that has a list of games that sorted by themes. It also uses third-party authentication
 and authorization service (Google Account) to login. User in this app will only allow to edit, delete, create their
 own theme or their own games.
 
@@ -21,9 +21,9 @@ own theme or their own games.
 
 ## Instruction for running the program
 1. make sure you are at /vagrant/catalog directory
-2. type **python database_setup.py**
-3. type **python lotsofgames.py**
-4. type **python application.py**
+2. run **python database_setup.py**
+3. run **python lotsofgames.py**
+4. run **python application.py**
 5. you can visit [http://localhost:8000](http://localhost:8000) locally
 
 ## Attribution
