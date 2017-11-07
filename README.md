@@ -14,17 +14,12 @@ own theme or their own games.
 5. **cd /vagrant**
 6. **cd catalog**
 7. **ls** ---make sure you have all the files
-8. please install the following python wrapper
-```
-    sudo pip install igdb_api_python
-```
+
 
 ## Instruction for running the program
 1. make sure you are at /vagrant/catalog directory
-2. run **python database_setup.py**
-3. run **python lotsofgames.py**
-4. run **python application.py**
-5. you can visit [http://localhost:8000](http://localhost:8000) locally
+2. run **python application.py**
+3. you can visit [http://localhost:8000](http://localhost:8000) locally
 
 ## Attribution
 1. Thanks for [IGDB API](https://www.igdb.com/api) to provide free video game database
