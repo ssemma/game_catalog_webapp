@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+    <div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{game.name}}</h1>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p> Description: {{game.summary}}</p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-responsive game-pic" src={{game.cover}} alt={{game.name}}>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <p> URL for more information: <a href="{{game.url}}">{{game.url}}</a> </p>
+            
+        </div>
+        <div class="col-md-4"></div>
+    </div> 
+    <div class= "row">
+        <div class="col-md-3">
+             <a href='{{url_for("editGame", theme_id = game.theme_id, game_id=game.id ) }}'>Edit</a> 
+        </div>
+        <div class="col-md-3">
+			<a href='{{url_for("deleteGame", theme_id = game.theme_id, game_id=game.id ) }}'>Delete</a>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+{% endblock %}

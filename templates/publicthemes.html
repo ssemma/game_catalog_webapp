@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+    <div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+        {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+    </div>
+    <div class="content row">
+        <!-- Sidebar -->
+        <div class="sidebar col-md-3" >
+            <h1>Themes</h1>
+            {% for theme in themes %}
+                <a href="{{url_for('showGames', theme_id = theme.id)}}" class="bar-item button">{{theme.name}}</a>
+                </br>
+            {% endfor %}  
+        </div>
+        
+        <!-- Page Content -->
+        <div class="main col-md-9">
+            <h1>Latest Games</h1>
+           
+            {% for list in lists %}
+                <a href="{{url_for('showOneGame', theme_id=list.theme_id, game_id=list.game_id)}}" class=" button">{{list.name}}</a>
+                </br>
+        {% endfor %}
+        </div>
+    </div>
+ {% endblock %}

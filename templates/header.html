@@ -1,0 +1,12 @@
+ <header class="row text-uppercase">
+    <div class="col-md-6 title text-left">
+        <h1>Game App</h1>
+    </div>
+    <div class="col-md-6 botton text-right">
+        {%if 'username' not in session %}
+        <a href="{{url_for('showLogin')}}">Login </a>
+        {% else %}
+        <a href="{{url_for('disconnect')}}">Logout </a>
+        {% endif %}	
+    </div>   
+</header>

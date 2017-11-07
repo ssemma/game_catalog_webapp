@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-11">
+			<h1>Edit {{theme.name}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<form action="{{ url_for('editTheme',theme_id = theme.id)}}" method = "post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type ="text" class="form-control" name="name" value="{{theme.name }}">
+					<button type="submit" class="btn btn-default" id="submit" type="submit">
+					<span aria-hidden="true"></span>Save</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

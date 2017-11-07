@@ -1,0 +1,36 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header {
+    background-color: coral;
+    Height: 70px;
+    margin-bottom: 50px;
+}
+.game-pic {
+    width: 80%;
+    height: 60%;
+}
+.botton {
+    font-size: 100%;
+    margin-top: 30px;
+}
+.flash {
+	background-color: #98FB98;
+	width:100%;
+	text-decoration: none;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+
+}

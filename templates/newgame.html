@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-11">
+			<h1>New Game</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<form action="{{url_for('newGame',theme_id=theme.id)}}" method = "post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+                    </br>
+					<input type ="text" maxlength="50" class="form-control" name="name"placeholder="Name of the game">
+                    </br></br>
+					<label for="description">Description:</label>
+                    </br>
+					<textarea class="form-control" maxlength="250" rows="3" name="description" placeholder="Description of the game"></textarea>
+                    </br></br>
+                    <label for="url">url:</label>
+                    </br>
+					<textarea class="form-control" maxlength="250" rows="3" name="url" placeholder="url for IGDB"></textarea>
+					</br></br>
+                    <label for="img_src">image source:</label>
+                    </br>
+					<div class="input-group">
+						<input type ="text" class="form-control" maxlength="250" name="img_src" placeholder="link of the game cover">
+					</div>
+                    </br></br>
+					<button type="submit" class="btn btn-default" id="submit" type="submit">
+					<span aria-hidden="true"></span>Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
+
